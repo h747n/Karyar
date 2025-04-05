@@ -1,0 +1,550 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  color: #333;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #e63946;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #c1121f;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: #f8f9fa;
+  color: #333;
+}
+
+.btn-secondary:hover {
+  background: #e9ecef;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 36px;
+  position: relative;
+}
+
+.section-title:after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #e63946;
+  margin: 20px auto;
+}
+
+/* Header */
+.top-bar {
+  background: #333;
+  color: white;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-bar span {
+  margin-right: 20px;
+}
+
+/* Navigation */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 20px 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #e63946;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://images.unsplash.com/photo-1494976388531-d1058494cdd8")
+      center/cover;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 48px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.price {
+  font-size: 28px;
+  margin: 30px 0;
+  color: #e63946;
+  font-weight: bold;
+}
+
+.cta-buttons {
+  margin-top: 40px;
+}
+
+.cta-buttons .btn {
+  margin: 0 10px;
+}
+
+/* Brands Section */
+.brands {
+  background: #f8f9fa;
+}
+
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.brand-card {
+  background: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.brand-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Section */
+.search-section {
+  background: #e9ecef;
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.search-form input,
+.search-form select {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.search-form button {
+  padding: 15px 30px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.feature-card {
+  background: white;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Inventory Section */
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.car-card {
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.car-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.car-image {
+  height: 200px;
+  background: #eee;
+  background-size: cover;
+  background-position: center;
+}
+
+.car-details {
+  padding: 20px;
+}
+
+.car-specs {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.car-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e63946;
+}
+
+.discount {
+  display: inline-block;
+  background: #e63946;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+/* Locations Section */
+.locations {
+  background: #f8f9fa;
+}
+
+.state-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+}
+
+.state {
+  background: white;
+  padding: 15px;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.state:hover {
+  background: #e63946;
+  color: white;
+}
+
+/* Why Choose Us */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.benefit-card {
+  text-align: center;
+  padding: 30px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.benefit-icon {
+  font-size: 40px;
+  color: #e63946;
+  margin-bottom: 20px;
+}
+
+/* CTA Section */
+.cta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.cta-card {
+  padding: 40px 30px;
+  background: #e63946;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.cta-card h3 {
+  margin-bottom: 15px;
+}
+
+.cta-card .btn {
+  background: white;
+  color: #e63946;
+  margin-top: 20px;
+}
+
+.cta-card .btn:hover {
+  background: #f8f9fa;
+}
+
+/* News Section */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.news-card {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.news-image {
+  height: 150px;
+  background: #eee;
+  border-radius: 5px;
+}
+
+.news-tags {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.read-more {
+  color: #e63946;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Trust Section */
+.trust-section {
+  background: #f8f9fa;
+}
+
+.trust-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.trust-list {
+  list-style: none;
+}
+
+.trust-list li {
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 30px;
+}
+
+.trust-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #e63946;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  padding: 80px 0 30px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.footer-column h4 {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.footer-column h4:after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #e63946;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #ddd;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #e63946;
+  padding-left: 5px;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid #444;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .brands-grid,
+  .features-grid,
+  .inventory-grid,
+  .benefits-grid,
+  .cta-grid,
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .state-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .search-form {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .state-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .news-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .brands-grid,
+  .features-grid,
+  .inventory-grid,
+  .benefits-grid,
+  .cta-grid,
+  .footer-grid,
+  .state-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .top-bar .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .top-bar span {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .hero {
+    height: auto;
+    padding: 120px 0 80px;
+  }
+}
